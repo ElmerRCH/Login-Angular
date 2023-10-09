@@ -1,6 +1,52 @@
 .registration-container{
-    background-color: white;
-    width: 50%;
-    margin: auto;
 
+  background-color: white;
+  margin:auto;
+  width: 40vw;
+  height: 40vh;
+  border-radius: 20px;
+  box-shadow:  2px 5px 5px black;
+
+}
+h1{
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #000;
+
+}
+form{
+  background-color: white;
+
+}
+.form-group{
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:10px;
+}
+input{
+  background-color: bisque ;
+  border:none;
+
+
+}
+span{
+  background: white ;
+  padding-left: 10px;
+
+}
+button{
+  margin-top: 20px;
+  background: white;
+  border:None;
+  border-radius: 5px;
+  background: bisque;
+
+}
+button:hover{
+  background: black;
+  color:white;
+  cursor: pointer;
 }

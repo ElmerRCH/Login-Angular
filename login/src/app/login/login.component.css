@@ -1,18 +1,54 @@
-*{background: white;}
+*{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
 .login-container{
-    display: flex;
-    
-    flex-direction: column;
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    background: white;
-    width: 40%;
-    height: 60vh;
-    border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background:linear-gradient(bisque,#b3107c);
+  width: 40%;
+  height: 40vh;
+  border-radius: 20px;
+  box-shadow:  2px 5px 5px black;
+
+}
+form{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
 
 }
 h1{
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
+
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #000;
+
+}
+input{
+
+  border:none;
+  border-bottom: 2px solid bisque;
+
+}
+button{
+  margin-top:20px;
+  margin-left: auto;
+  margin-right:auto;
+  background-color: bisque ;
+  width:5.5rem;
+  height: 2.5rem;
+  border:none;
+  border-radius:5px;
+}
+button:hover{
+  cursor:pointer;
+
+
+
 }
