@@ -1,25 +1,19 @@
 <app-nav-bar></app-nav-bar>
-<div class="registration-container">
-  <h1>Registro de Usuario</h1>
-  <form>
-    <div class="form-group">
+<div class="login-container">
+  <form (ngSubmit)="enviarFormulario()">
 
-      <span for="Name">Nombre:
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+    <h1>Registro de Usuario</h1>
+      <span for="Name">Nombre:</span>
+      <input type="text" id="nombre" name="nombre" ngModel="nombre" placeholder="Tu nombre" required>
 
-      </span>
+      <span for="email">Correo Gmail: </span>
+      <input type="email" id="correo" name="correo" placeholder="correo@example.com" required>
 
-      <span for="email">Correo Gmail:
-        <input type="email" id="correo" name="correo" placeholder="correo@example.com" required>
-      </span>
+      <span for="contraseña">Contraseña:</span>
+      <input type="password" id="password" name="password" placeholder="Contraseña" required>
 
-      <span for="contraseña">Contraseña:
-        <input type="password" id="password" name="password" placeholder="Contraseña" required>
-      </span>
-      <span for="confirm-password">Confirmar contraseña:
-        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required>
-      </span>
-    </div>
+      <span for="confirm-password">Confirmar contraseña:</span>
+      <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required>
     <button type="submit">Registrarse</button>
   </form>
 </div>
