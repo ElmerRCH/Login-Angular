@@ -1,26 +1,10 @@
 <app-nav-bar></app-nav-bar>
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Registro de Usuario</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <form [formGroup]="registroForm" (ngSubmit)="submitRegistro()">
-      <mat-form-field appearance="fill">
-        <mat-label>Nombre</mat-label>
-        <input matInput formControlName="nombre" required>
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Correo Electrónico</mat-label>
-        <input matInput formControlName="correo" required>
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Contraseña</mat-label>
-        <input matInput type="password" formControlName="contrasena" required>
-      </mat-form-field>
-
-      <button mat-raised-button color="primary" type="submit">Registrarse</button>
-    </form>
-  </mat-card-content>
-</mat-card>
+<div [formGroup]="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="name">
+   
+  </mat-form-field>
+  <h1>{{name.valid}}</h1>
+  <button mat-raised-button color="primary" (click)="sendName()" [disabled]="form.invalid">Enviar</button>
+</div>
