@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { TablaComponent } from './tabla/tabla.component';
 
 const routes: Routes = [
   {
@@ -14,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'users/registrar', component: RegistrarComponent
+  },
+  {
+    path: 'users/tabla', component: TablaComponent
   },
 
 ];

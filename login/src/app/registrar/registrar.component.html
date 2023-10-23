@@ -1,19 +1,26 @@
 <app-nav-bar></app-nav-bar>
-<div class="login-container">
-  <form (ngSubmit)="enviarFormulario()">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Registro de Usuario</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="registroForm" (ngSubmit)="submitRegistro()">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" required>
+      </mat-form-field>
 
-    <h1>Registro de Usuario</h1>
-      <span for="Name">Nombre:</span>
-      <input type="text" id="nombre" name="nombre" ngModel="nombre" placeholder="Tu nombre" required>
+      <mat-form-field appearance="fill">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput formControlName="correo" required>
+      </mat-form-field>
 
-      <span for="email">Correo Gmail: </span>
-      <input type="email" id="correo" name="correo" placeholder="correo@example.com" required>
+      <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="contrasena" required>
+      </mat-form-field>
 
-      <span for="contraseña">Contraseña:</span>
-      <input type="password" id="password" name="password" placeholder="Contraseña" required>
-
-      <span for="confirm-password">Confirmar contraseña:</span>
-      <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required>
-    <button type="submit">Registrarse</button>
-  </form>
-</div>
+      <button mat-raised-button color="primary" type="submit">Registrarse</button>
+    </form>
+  </mat-card-content>
+</mat-card>
