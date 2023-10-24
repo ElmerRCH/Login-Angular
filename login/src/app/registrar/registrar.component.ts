@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-registrar',
@@ -7,20 +8,42 @@ import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
   styleUrls: ['./registrar.component.css']
 })
 export class RegistrarComponent {
-
-  name: FormControl = new FormControl('',[Validators.required]);
-
   form: FormGroup;
 
-  constructor(
-    private fb: FormBuilder
-  ){
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.form = this.fb.group({
-      name: ['',Validators.required]
-    })
+      name: ['', Validators.required],
+      olds: ['', Validators.required],
+      password: ['', Validators.required],
+      confi_password: ['', Validators.required],
+
+    });
   }
 
- sendName(){
-  console.log(this.name.value)
- }
+  sendName() {
+    if (this.form.valid) {
+      const name = this.form.value.name;
+      const olds = this.form.value.olds;
+      const password = this.form.value.password;
+      const confi_password = this.form.value.password;
+      const dict = {
+        name:name,
+        olds:olds,
+        password:password,
+        confi_password:confi_password
+      };
+      console.log(dict)
+
+      // Enviar el nombre como objeto JSON
+      this.http.post('http://0.0.0.0:8100/registrar-usuario',dict).subscribe(
+        (response) => {
+          console.log('Respuesta del servidor:', response);
+          // Realiza acciones adicionales después de enviar los datos, si es necesario
+        },
+        (error) => {
+          console.error('Error al enviar datos:', error);
+        }
+      );
+    }
+  }
 }

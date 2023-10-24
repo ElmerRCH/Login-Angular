@@ -20,3 +20,16 @@ services:
     volumes: 
       - ./login:/app
     command: ["ng","serve","--host","0.0.0.0","--port","8200"]
+  db:
+    image: mariadb:10.6
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootroot
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: rootroot

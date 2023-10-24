@@ -3,8 +3,20 @@
   <mat-form-field appearance="fill">
     <mat-label>Nombre</mat-label>
     <input matInput formControlName="name">
-   
   </mat-form-field>
-  <h1>{{name.valid}}</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Edad</mat-label>
+    <input matInput formControlName="olds">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>contraseña</mat-label>
+    <input matInput formControlName="password">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>confirmar contraseña</mat-label>
+    <input matInput formControlName="confi_password">
+  </mat-form-field>
+
+
   <button mat-raised-button color="primary" (click)="sendName()" [disabled]="form.invalid">Enviar</button>
 </div>
