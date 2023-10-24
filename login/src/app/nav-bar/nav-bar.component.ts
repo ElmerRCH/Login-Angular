@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 })
 
 export class NavBarComponent {
+
   linkLogin: any = 'users/login';
   link: any = 'users/registrar';
+  mostrar: any = 'users/tabla';
+
 }
