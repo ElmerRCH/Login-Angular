@@ -5,10 +5,9 @@
     </div>
 
     <ul class="nav-links">
-        <button [routerLink]="linkLogin">Iniciar sesión</button>
-        <button [routerLink]="link">Registrar</button>
-        <button [routerLink]="mostrar">mostrar</button>
-
+        <button (click)="iniciarSesion()">Iniciar sesión</button>
+        <button (click)="registrar()">Registrar</button>
+        <button (click)="mostrar()">mostrar</button>
     </ul>
 
 </nav>

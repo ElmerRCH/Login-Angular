@@ -1,22 +1,22 @@
 <app-nav-bar></app-nav-bar>
-<div [formGroup]="form">
-  <mat-form-field appearance="fill">
-    <mat-label>Nombre</mat-label>
-    <input matInput formControlName="name">
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Edad</mat-label>
-    <input matInput formControlName="olds">
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>contraseña</mat-label>
-    <input matInput formControlName="password">
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>confirmar contraseña</mat-label>
-    <input matInput formControlName="confi_password">
-  </mat-form-field>
-
-
-  <button mat-raised-button color="primary" (click)="sendName()" [disabled]="form.invalid">Enviar</button>
+<div class="login-container">
+  <div [formGroup]="form" class="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Edad</mat-label>
+      <input matInput formControlName="olds">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>contraseña</mat-label>
+      <input matInput formControlName="password">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>confirmar contraseña</mat-label>
+      <input matInput formControlName="confi_password">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="sendName()" [disabled]="form.invalid">Enviar</button>
+  </div>
 </div>

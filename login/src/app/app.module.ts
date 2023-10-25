@@ -14,6 +14,7 @@ import {MatTableModule} from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     InicioComponent,
     LoginComponent,
     RegistrarComponent,
-    TablaComponent
+    TablaComponent,
+    BienvenidaComponent
   ],
   imports: [
     BrowserModule,

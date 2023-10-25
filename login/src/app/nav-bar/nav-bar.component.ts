@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,8 +10,16 @@ import { Component } from '@angular/core';
 
 export class NavBarComponent {
 
-  linkLogin: any = 'users/login';
-  link: any = 'users/registrar';
-  mostrar: any = 'users/tabla';
+  constructor( private router: Router){};
+
+  iniciarSesion(){
+    this.router.navigate(['/users/login']);
+  }
+  registrar(){
+    this.router.navigate(['/users/registrar']);
+  }
+  mostrar(){
+    this.router.navigate(['users/tabla']);
+  }
 
 }

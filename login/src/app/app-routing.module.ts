@@ -4,6 +4,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { TablaComponent } from './tabla/tabla.component';
+import {BienvenidaComponent} from './bienvenida/bienvenida.component'
 
 const routes: Routes = [
   {
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path: 'users/tabla', component: TablaComponent
+  },
+  {
+    path: 'users/bienvenida', component:BienvenidaComponent
   },
 
 ];

@@ -17,10 +17,11 @@ export class UsersService {
   showUser(id: number) : Observable<any> {
     return this._http.get(`https://jsonplaceholder.typicode.com/users/${id}`) as Observable<any>
   }
+
   getAvatar(id: number) : Observable<any> {
     return this._http.get(`https://jsonplaceholder.typicode.com/posts/${id}`) as Observable<any>
-  }
 
+  }
   LoginUsers(): Observable<any[]> {
     return this._http.get('app-login') as Observable<any[]>
   }

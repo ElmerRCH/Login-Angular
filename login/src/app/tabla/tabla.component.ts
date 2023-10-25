@@ -4,8 +4,6 @@ import { UsersService } from '../users.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 
-
-
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -32,7 +30,7 @@ export class TablaComponent {
 
       this.usuarios = data.splice(0,10)
       console.log(this.usuarios )
-      
+
     })
   }
   ping() {
