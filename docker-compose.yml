@@ -2,6 +2,7 @@ version: "3"
 name: loginangular
 services:
   fastapi:
+      image: python3.9
       build:
         context: ./Backend-login
       ports:
@@ -10,6 +11,7 @@ services:
       volumes: 
         - ./Backend-login:/app
       command: uvicorn main:app --host 0.0.0.0 --port 8100 --reload
+
   angular:
     image: angular:16
     build:

@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { BackgroundComponent } from './background/background.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { BienvenidaComponent } from './bienvenida/bienvenida.component';
     LoginComponent,
     RegistrarComponent,
     TablaComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,
