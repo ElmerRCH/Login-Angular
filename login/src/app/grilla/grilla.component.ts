@@ -18,22 +18,15 @@ export class GrillaComponent {
   }
   onFileSelected(event: any) {
     const fileInput = event.target;
-    const file = fileInput.files[0];
-    console.log('--------',typeof file);
-
-    if (file) {
-      // Realiza aquí la lógica para cargar la imagen
-      console.log('Imagen seleccionada:', file);
-    } else {
-      console.error('No se seleccionó ninguna imagen.');
-    }
+    this.selectedFile = fileInput.files[0];
   }
+  
   uploadImage() {
     if (this.selectedFile) {
       const formData = new FormData();
       formData.append('image', this.selectedFile);
       console.log(typeof formData)
-      // Enviar el nombre como objeto JSON
+      //Enviar el nombre como objeto JSON
       this.http.post('http://0.0.0.0:8100/recibir-imagen',formData).subscribe(
         (response) => {
           console.log('Respuesta del servidor:',response);
