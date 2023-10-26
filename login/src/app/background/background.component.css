@@ -8,7 +8,7 @@
 }
 
 .hero__title {
-  color: black;
+  color: #b3107c;
   text-align: center;
 
   background: rgb(255, 197, 121);
@@ -46,7 +46,7 @@ input:hover{
   left: 45vw;
   width: 10px;
   height: 10px;
-  border: solid 1px black;
+  border: solid 1px #b3107c;
   -webkit-transform-origin: top left;
           transform-origin: top left;
   -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
@@ -55,7 +55,7 @@ input:hover{
           animation: cube 12s ease-in forwards infinite;
 }
 .cube:nth-child(2n) {
-  border-color:black;
+  border-color:#b3107c;
 }
 .cube:nth-child(2) {
   -webkit-animation-delay: 2s;

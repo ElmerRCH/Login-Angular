@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { BackgroundComponent } from './background/background.component';
+import { GrillaComponent } from './grilla/grilla.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { BackgroundComponent } from './background/background.component';
     RegistrarComponent,
     TablaComponent,
     BienvenidaComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    GrillaComponent
   ],
   imports: [
     BrowserModule,

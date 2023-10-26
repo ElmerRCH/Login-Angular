@@ -18,7 +18,6 @@ export class LoginComponent {
     }
     return control.hasError(validationType) && (control.dirty || control.touched);
   }
-
   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
     this.form = this.fb.group({
       name: ['', Validators.required],
