@@ -2,7 +2,7 @@ version: "3"
 name: loginangular
 services:
   fastapi:
-      image: python3.9
+      image: python3.9 
       build:
         context: ./Backend-login
       ports:
@@ -11,7 +11,6 @@ services:
       volumes: 
         - ./Backend-login:/app
       command: uvicorn main:app --host 0.0.0.0 --port 8100 --reload
-
   angular:
     image: angular:16
     build:
@@ -21,4 +20,4 @@ services:
     working_dir: /app
     volumes: 
       - ./login:/app
-    command: ["ng","serve","--host","0.0.0.0","--port","8200"]
+    command: ng serve --host 0.0.0.0 --port 8200

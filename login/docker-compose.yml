@@ -1,10 +1,23 @@
-version: '2'
+version: "3"
+name: loginangular
 services:
+  fastapi:
+      image: python3.9
+      build:
+        context: ./Backend-login
+      ports:
+        - "8100:8100"
+      working_dir: /app
+      volumes:
+        - ./Backend-login:/app
+      command: uvicorn main:app --host 0.0.0.0 --port 8100 --reload
   angular:
     image: angular:16
+    build:
+       context: ./login
+    ports:
+      - "8200:8200"
     working_dir: /app
     volumes:
-      - ./:/app:delagated
-    ports:
-    - 4300:4300
-    command: ["ng","serve","--host","0.0.0.0","--port","4300"]
+      - ./login:/app
+    command: ng serve --host 0.0.0.0 --port 8200
